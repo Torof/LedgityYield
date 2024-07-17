@@ -12,7 +12,7 @@ import { twMerge } from "tailwind-merge";
 import { AppPreMining } from "@/components/app/pre-mining/AppPreMining";
 import { SessionProvider } from "next-auth/react";
 import { AppStaking } from "@/components/app/staking/AppStaking";
-import { AppBridge } from "@/components/app/bridge/AppBridge";
+import { AppSwap } from "@/components/app/swap/AppSwap";
 import Link from "next/link";
 
 interface Props {
@@ -74,7 +74,7 @@ const _AppTabs: FC = () => {
           Pre-Mining
         </TabsTrigger>
         <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-        <TabsTrigger value="bridge">Swap</TabsTrigger>
+        <TabsTrigger value="swap">Swap</TabsTrigger>
       </TabsList>
       <div className="[&_>_*]:animate-fadeAndMoveIn [&_>_*]:[animation-duration:300ms] sm:px-5 max-w-[100vw]">
         <SessionProvider>
@@ -93,8 +93,8 @@ const _AppTabs: FC = () => {
           <TabsContent value="dashboard">
             <AppDashboard />
           </TabsContent>
-          <TabsContent value="bridge">
-            <AppBridge />
+          <TabsContent value="swap">
+            <AppSwap />
           </TabsContent>
         </SessionProvider>
       </div>
